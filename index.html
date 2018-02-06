@@ -2,11 +2,11 @@
 <html>
 <head>
 <script type="text/javascript" src="phone.js"></script>
-
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: Arial;}
 
+body {font-family: Arial;}
 .button {
     background-color: #ccc;
     border: none;
@@ -56,6 +56,13 @@ body {font-family: Arial;}
     border: 1px solid #ccc;
     border-top: none;
 }
+
+.gesture_div {
+    height: 300px;
+    width: 300px;
+    background-color: powderblue;
+}
+
 </style>
 </head>
 <body>
@@ -66,8 +73,11 @@ body {font-family: Arial;}
   <button class="tablinks" onclick="openTab(event, 'Dialer')">Dialer</button>
   <button class="tablinks" onclick="openTab(event, 'Contact_List')">Contact List</button>
   <button class="tablinks" onclick="openTab(event, 'Add_Contact')">Add Contact</button>
+  <button class="tablinks" onclick="openTab(event, 'Test_Gestures')">Test Gestures</button>
 </div>
 
+
+  
 <div id="Dialer" class="tabcontent">
   <h3>Dial Number</h3>
   <br>
@@ -139,7 +149,44 @@ body {font-family: Arial;}
 	
 </div>
 
+
+
+<div id="Test_Gestures" class="tabcontent">
+  <h3>Gesture Area</h3>
+  <input id= "gestureInput" type="text" disabled placeholder="Ready">
+  <br>	
+  <br>
+  <div id="gesture_Input" class="gesture_div">
+  </div>
+  <br>
+ </div>
+
+ 
+ 
 <script>
+downX = 0
+downY = 0
+
+$( gesture_Input )
+  .mouseup(function(event) {
+	upX = event.pageX
+	upY = event.pageY
+	if (upX < downX)
+		$(gestureInput).val("Swipe Left");
+		
+	else if (upX > downX)
+		$(gestureInput).val("Swipe Right");
+				
+	else if (upX == downX)
+		$(gestureInput).val("Mouse Up");
+		
+  })
+  .mousedown(function(event) {
+    $(gestureInput).val("Mouse Down");
+	downX = event.pageX
+	downY = event.pageY
+  });
+
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
