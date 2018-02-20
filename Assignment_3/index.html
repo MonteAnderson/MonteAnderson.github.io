@@ -65,142 +65,30 @@ body {font-family: Arial;}
 
 </style>
 </head>
+
+<div>
+<h3>
+Blog Links
+</h3>
+
+<ul>
+<li> <a href="index.html">Home</a> </li>
+<li> <a href="index.html">Archive</a> </li>
+<li> <a href="phone.html">About Me</a> </li>
+</ul>
+</div>
+
+<h3>
+How To Build A Computer
+</h3>
+<img src="https://i.imgur.com/KoJ7slL.jpg" alt="A picture of a high end gaming computer." width="320" height="240">
+<p>
+If you are trying to build a computer and have never done so before, it may seem like a very complicated task. However, it's actually quite simple, and there are only a few things you need to be aware of.
+</p>
+
 <body>
 
-<p>Click on the buttons inside the tabbed menu:</p>
-
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Dialer')">Dialer</button>
-  <button class="tablinks" onclick="openTab(event, 'Contact_List')">Contact List</button>
-  <button class="tablinks" onclick="openTab(event, 'Add_Contact')">Add Contact</button>
-  <button class="tablinks" onclick="openTab(event, 'Test_Gestures')">Test Gestures</button>
-</div>
-
-
-  
-<div id="Dialer" class="tabcontent">
-  <h3>Dial Number</h3>
-  <br>
-  <input id= "dialerInput" type="text" disabled>
-  <br>
-  <button class="button" onclick="dialerFunc('7')" >7</button>
-  <button class="button" onclick="dialerFunc('8')" >8</button>
-  <button class="button" onclick="dialerFunc('9')" >9</button>
-
-  <br>
-  <button class="button" onclick="dialerFunc('4')" >4</button>
-  <button class="button" onclick="dialerFunc('5')" >5</button>
-  <button class="button" onclick="dialerFunc('6')" >6</button>
-
-  <br>
-  <button class="button" onclick="dialerFunc('1')" >1</button>
-  <button class="button" onclick="dialerFunc('2')" >2</button>
-  <button class="button" onclick="dialerFunc('3')" >3</button>
-
-  <br>
-  <button class="button" onclick="dialerFunc('*')" >*</button>
-  <button class="button" onclick="dialerFunc('0')" >0</button>
-  <button class="button" onclick="dialerFunc('#')" >#</button>
-
-  <br>
-  
-  <button class="button" onclick="dialerFunc('')" >Dial</button>
-  <button class="button" onclick="dialerClear('0')" >Clear</button>
-  
-  
-</div>
-
-<div id="Contact_List" class="tabcontent">
-  <h3>List of Contacts</h3>
-  <a href="#" class="button">Person 1</a>
-  <a href="#" class="button">Person 2</a>
-  <a href="#" class="button">Person 3</a>
-  
-  <br>
-  <a href="#" class="button">Personnnnnn 4</a>
-  <a href="#" class="button">Person 5</a>
-  <a href="#" class="button">Pers 6</a>
-  
-</div>
-
-<div id="Add_Contact" class="tabcontent">
-  <h3>Add New Contact</h3>
-  <form class="pure-form pure-form-stacked">
-	  <label for="name">Name<br></label>
-	  <input id="contactName" placeholder="Jane Smith">
-  </form>
-  
-  <br>
-  <form>
-	  <label for="name">Phone Number<br></label>
-	  <input id="contactNumber" placeholder="123-456-789">
-	  
-  </form>
-  
-  <br>
-  <form>
-	  <label for="name">Email Address<br></label>
-	  <input id="contactEmail" placeholder="janesmith@colorado.edu">
-	  
-  </form>
-  <br>
-  <button class="button" onclick="contactAddClear()" >Clear</button>
-    <button class="button" onclick="addContactFunc()" >Dial</button>
-	
-</div>
-
-
-
-<div id="Test_Gestures" class="tabcontent">
-  <h3>Gesture Area</h3>
-  <input id= "gestureInput" type="text" disabled placeholder="Ready">
-  <br>	
-  <br>
-  <div id="gesture_Input" class="gesture_div">
-  </div>
-  <br>
- </div>
-
- 
- 
-<script>
-downX = 0
-downY = 0
-
-$( gesture_Input )
-  .mouseup(function(event) {
-	upX = event.pageX
-	upY = event.pageY
-	if (upX < downX)
-		$(gestureInput).val("Swipe Left");
-		
-	else if (upX > downX)
-		$(gestureInput).val("Swipe Right");
-				
-	else if (upX == downX)
-		$(gestureInput).val("Mouse Up");
-		
-  })
-  .mousedown(function(event) {
-    $(gestureInput).val("Mouse Down");
-	downX = event.pageX
-	downY = event.pageY
-  });
-
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
+<input type="test" id="firstBlank">
      
 </body>
 </html> 
