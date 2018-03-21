@@ -1,102 +1,53 @@
-<!DOCTYPE html>
-<html lang = "en">
-<head>
-<script type="text/javascript" src="phone.js"></script>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- saved from url=(0087)https://shaunkane.github.io/csci4849-spring2018/a8-switch-control/calculator/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>
+			Calculator Demo
+		</title>
+		<link rel="stylesheet" href="./Calculator calculator.css" type="text/css">
+	</head>
+	<body>
+		<div id="calculator">
+			<h1>calc U l8r</h1>
+			<div class="calculator_row">
+				<input id="number_input">
+			</div>
+			<div class="calculator_row">
+				<button id="button7" class="calcButton row1 col1">7</button>
+				<button id="button8" class="calcButton row1 col2">8</button>
+				<button id="button9" class="calcButton row1 col3">9</button>
+				<button id="buttonDivide" class="calcButton row1 col4 function">/</button>
+			</div>
+			<div class="calculator_row">
+				<button id="button4" class="calcButton row2 col1">4</button>
+				<button id="button5" class="calcButton row2 col2">5</button>
+				<button id="button6" class="calcButton row2 col3">6</button>
+				<button id="buttonMultiply" class="calcButton row2 col4 function">*</button>
+			</div>
+			<div class="calculator_row">
+				<button id="button1" class="calcButton row3 col1">1</button>
+				<button id="button2" class="calcButton row3 col2">2</button>
+				<button id="button3" class="calcButton row3 col3">3</button>
+				<button id="buttonAdd" class="calcButton row3 col4 function">+</button>
+			</div>
+			<div class="calculator_row">
+				<button id="button0" class="calcButton row4 col1">0</button>
+				<button id="buttonClear" class="calcButton row4 col2 meta">C</button>
+				<button id="buttonEquals" class="calcButton row4 col3 meta">=</button>
+				<button id="buttonSubtract" class="calcButton row4 col4 function">-</button>
+			</div>
+		</div>
+		<div id="comments">
+			<h2>About this app</h2>
+			<p>Include information here about your app.</p>
+			<ul>
+				<li>Instructions for using the app</li>
+				<li>Test results</li>
+				<li>Anything else you have tried out</li>
+			</ul>
+		</div>
+		<script src="./Calculator jquery.min.js.download" type="text/javascript"></script>
+		<script src="./Calculator calculator.js.download" type="text/javascript"></script>
+	
 
-body {font-family: Arial;}
-.button {
-    background-color: #ccc;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-
-.gesture_div {
-    height: 300px;
-    width: 300px;
-    background-color: powderblue;
-}
-
-.hidden {
-  display:none;
-}
-
-</style>
-</head>
-<body>
-
-<div role = "navigation">
-<h3> Blog Links </h3>
-
-<ul>
-<li> <a href="index.html">Home</a> </li>
-<li> <a href="index.html">Archive</a> </li>
-<li> <a href="https://github.com/MonteAnderson">My Github</a> </li>
-</ul>
-</div>
-
-<h3>
-How To Build A Computer
-</h3>
-<img src="https://i.imgur.com/KoJ7slL.jpg" alt="A picture of a high end gaming computer." width="320" height="240">
-<p>If you are trying to build a computer and have never done so before, it may seem like a very complicated task. However, it's actually quite simple, and there are only a few things you need to be aware of. </p>
-
-<div>
-<img src="https://cdn.mos.cms.futurecdn.net/xfjKNzCinTsR5PaYrDEDQE-970-80.png" alt="A picture of a high end gaming computer." width="320" height="240">
-</div>
-
-</div>
-<p>Leave a comment!</p>
-<p>For some reason, this doesn't work on my google chrome, but works on my local version and when I open the github.io link in Incognito mode, but not regular chrome, so try that if you don't see the message appear after pressing the button.</p>
-
-<input type="test" id="firstBlank">
-<div><button class="button" onclick="throwError()" >Submit Comment</button> 
-<p id="expirationWarning" role="alert" class="hidden">Comments are currently disabled.</p></div>
-</body>
-</html> 
+</body></html>
